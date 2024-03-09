@@ -1,0 +1,174 @@
+/* Root variables define the core design system for light theme */
+:root {
+    height: 100dvh; /* Sets the height of the root element */
+    --bg: #21222C; /* Background color */
+    --text: #E6E6E6; /* Primary text color */
+    --ghost-contrast: #4D4D66; /* Low contrast color for subtle elements */
+    --faint-contrast: #323341; /* Even lower contrast color */
+    --faint-contrast-trans: #3233417d; /* Lower contrast color with transparency */
+    --mild-contrast: #4D4D66; /* Mild contrast color */
+    --good-contrast: #E6E6E6a; /* High contrast color for readability */
+    --button-bg: #7970A9; /* Button background color */
+    --button-text: #E6E6E6; /* Button text color */
+    --focus-color: #1C6B00; /* Color for focused elements */
+    --button-bg-hover: #E14D75; /* Button background color on hover */
+    --gradient-start: #544E75; /* Starting color of gradient */
+    --gradient-end: #585083; /* Ending color of gradient */
+}
+
+/* Theme-dark class for dark mode styling */
+:root .theme-dark {
+    --bg: #21222C; /* Dark mode background color */
+    --text: #E6E6E6; /* Dark mode text color */
+    --good-contrast: #E6E6E6fa; /* Dark mode high contrast color */
+    --button-bg: #323341; /* Dark mode button background color */
+    --button-bg-hover: #4D4D66; /* Dark mode button background color on hover */
+    --button-text: #E6E6E6; /* Dark mode button text color */
+    color-scheme: dark; /* Sets the overall color scheme for dark mode */
+}
+
+/* Dark theme link styling */
+:root .theme-dark a {
+    color: var(--button-text); /* Ensures links use the button text color variable */
+}
+
+/* Root container styling */
+#root>div {
+    max-width: 100%; /* Ensures the div doesn't exceed the width of the viewport */
+}
+
+/* Root element styling */
+#root {
+    max-width: 100%; /* Ensures the root element doesn't exceed the width of the viewport */
+    margin: auto; /* Centers the root element horizontally */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+}
+
+/* Header styling */
+header {
+    background-image: linear-gradient(to bottom, var(--gradient-start) 30%, var(--gradient-end) 100%); /* Applies a gradient background */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    filter: none; /* No filter applied */
+    position: sticky; /* Makes the header stick to the top of the viewport */
+    top: 0; /* Aligns the header to the top */
+    padding: .2em; /* Adds padding inside the header */
+    z-index: 1; /* Ensures the header stacks above other elements */
+    border: 1px solid var(--faint-contrast); /* Border color for the header */
+    text-shadow: 1px 1px 4px var(--ghost-contrast); /* Text shadow for header elements */
+}
+
+/* Body styling */
+body {
+    background-size: contain; /* Ensures the background image scales to fit within the container */
+    background-color: var(--bg); /* Sets the background color */
+    color: var(--text); /* Sets the text color */
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+    padding: .1em .6em .2em; /* Padding inside the breadcrumb */
+    line-height: 1.8em; /* Line height for the breadcrumb text */
+    border-radius: .7em; /* Rounded corners for the breadcrumb */
+    background-color: var(--button-bg); /* Background color for the breadcrumb */
+    border: 1px solid var(--faint-contrast); /* Border color for the breadcrumb */
+    margin: 2px 4px auto; /* Margin around the breadcrumb */
+    display: inline-block; /* Allows the breadcrumb to sit inline with other elements */
+    min-width: 60px; /* Minimum width for the breadcrumb */
+    text-align: center; /* Centers the text within the breadcrumb */
+    text-shadow: 0px 0px 4px var(--ghost-contrast); /* Text shadow for the breadcrumb */
+    word-break: break-word; /* Allows long words to break and wrap onto the next line */
+    transition: all 0.25s ease; /* Transition effect for hover states */
+}
+
+/* Breadcrumb hover state styling */
+.breadcrumb:hover {
+    background-color: var(--button-bg-hover); /* Changes the background color on hover */
+    text-shadow: 0px 0px 4px var(--good-contrast); /* Changes the text shadow on hover */
+}
+
+/* Button styling */
+button {
+    background-color: var(--button-bg); /* Button background color */
+    color: var(--button-text); /* Button text color */
+    padding: .5em 1em; /* Padding inside the button */
+    text-decoration: none; /* No text decoration for the button */
+    border-radius: .3em; /* Rounded corners for the button */
+    vertical-align: middle; /* Aligns the button vertically */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    border: 1px solid var(--faint-contrast); /* Border color for the button */
+    text-shadow: 1px 1px 4px var(--ghost-contrast); /* Text shadow for the button */
+    font-size: 20px; /* Font size for the button */
+    font-weight: bold; /* Font weight for the button */
+    transition: all 0.25s ease; /* Transition effect for hover states */
+}
+
+/* Button hover state styling */
+button:hover {
+    background-color: var(--button-text); /* Changes the background color on hover */
+    color: var(--button-bg-hover); /* Changes the text color on hover */
+    text-shadow: 1px 1px 4px var(--good-contrast); /* Changes the text shadow on hover */
+}
+
+/* List wrapper styling */
+.list-wrapper {
+    max-width: 100%; /* Ensures the list wrapper doesn't exceed the width of the viewport */
+}
+
+/* Directory list styling */
+ul.dir {
+    flex: 1; /* Allows the list to grow to fill the space in a flex container */
+    padding: 15px; /* Padding inside the list */
+    margin: auto; /* Centers the list horizontally */
+    min-width: 95%; /* Minimum width for the list */
+    max-width: 95%; /* Maximum width for the list */
+    text-shadow: 1px 1px 4px var(--ghost-contrast); /* Text shadow for list items */
+}
+
+/* Directory list item styling */
+ul.dir li {
+    display: block; /* Displays the list item as a block */
+    min-height: 2em; /* Minimum height for the list item */
+    list-style-type: none; /* No list item marker */
+    margin: 1px auto; /* Margin around the list item */
+    padding: .3em .3em .4em; /* Padding inside the list item */
+    border: 1px solid var(--faint-contrast); /* Border color for the list item */
+    border-radius: 8px; /* Rounded corners for the list item */
+}
+
+/* Link styling */
+a {
+    text-decoration: none; /* No text decoration for links */
+    color: var(--button-text); /* Link text color */
+    font-size: 18px; /* Font size for links */
+    vertical-align: middle; /* Aligns links vertically */
+}
+
+/* Media query for large screens */
+@media (min-width: 1200px) {
+    /* Player styling for large screens */
+    #player {
+        position: fixed; /* Fixes the player position */
+        top: auto; /* Aligns the player to the top automatically */
+        bottom: 2px; /* Positions the player from the bottom */
+        left: 2px; /* Positions the player from the left */
+        padding: .5%; /* Padding inside the player */
+        min-width: calc((100vw - 800px) / 1.2); /* Minimum width for the player */
+        box-sizing: border-box; /* Box sizing to include padding and border */
+        background: var(--faint-contrast-trans); /* Background color with transparency for the player */
+        border-radius: 8px; /* Rounded corners for the player */
+        border: 1px solid var(--faint-contrast); /* Border color for the player */
+        z-index: 1; /* Ensures the player stacks above other elements */
+    }
+}
+
+/* Player title styling */
+#player-title {
+    color: var(--button-text); /* Player title text color */
+    padding: .5em 1em; /* Padding inside the player title */
+    text-decoration: none; /* No text decoration for the player title */
+    border-radius: .3em; /* Rounded corners for the player title */
+    vertical-align: middle; /* Aligns the player title vertically */
+    text-shadow: 1px 1px 4px var(--ghost-contrast); /* Text shadow for the player title */
+    font-size: 18px; /* Font size for the player title */
+    font-weight: bold; /* Font weight for the player title */
+}
