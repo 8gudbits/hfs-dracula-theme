@@ -8,6 +8,15 @@ _This is Dracula theme for HTTP File Server (HFS) version 3. This theme is inspi
 
 _To install the Dracula theme for HFS 3, please follow these steps:_
 
+##### Download via HFS admin panel:
+
+1. _Open the HFS admin panel in your web browser._
+2. _Go to the 'Plugins' section and click on `SEARCH ONLINE`._
+3. _Click on the search icon and search for `hfs-dracula-theme`_
+4. _Click on the download button and run the plugin once downloaded._
+
+##### Download manually or using git:
+
 1. _Download this repository by clicking [here](https://github.com/TechWhizKid/hfs-dracula-theme/archive/refs/heads/main.zip) or clone it using Git with the following command:_
 
    ```bash
