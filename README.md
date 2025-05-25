@@ -17,10 +17,10 @@ _To install the Dracula theme for HFS 3, please follow these steps:_
 
 ##### Download manually or using git:
 
-1. _Download this repository by clicking [here](https://github.com/TechWhizKid/hfs-dracula-theme/archive/refs/heads/main.zip) or clone it using Git with the following command:_
+1. _Download this repository by clicking [here](https://github.com/8gudbits/hfs-dracula-theme/archive/refs/heads/main.zip) or clone it using Git with the following command:_
 
    ```bash
-   git clone --depth 1 https://github.com/TechWhizKid/hfs-dracula-theme.git
+   git clone --depth 1 https://github.com/8gudbits/hfs-dracula-theme.git
    ```
 
 2. _Navigate to the downloaded or cloned repository folder._
