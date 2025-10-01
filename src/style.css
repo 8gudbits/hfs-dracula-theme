@@ -1,36 +1,41 @@
-/* Root variables for color scheme */
+/* Root-level variables for theme colors and layout */
 :root {
-    height: 100dvh;
-    --bg: rgb(33, 34, 44); /* Background color */
-    --text: rgb(248, 248, 242); /* Text color */
-    --ghost-contrast: rgb(77, 77, 102); /* Ghost contrast color */
-    --faint-contrast: rgb(15, 17, 19); /* Faint contrast color */
-    --faint-contrast-trans: rgba(15, 17, 19, 0.50); /* Transparent faint contrast color */
-    --mild-contrast: rgb(77, 77, 102); /* Mild contrast color */
-    --good-contrast: rgb(230, 230, 230); /* Good contrast color */
-    --button-bg: rgb(121, 112, 169); /* Button background color */
-    --button-bg-hover: rgb(255, 85, 85); /* Button background color on hover */
-    --button-text: rgb(248, 248, 242); /* Button text color */
-    --focus-color: rgb(80, 250, 123); /* Focus color */
-    --gradient-start: rgb(81, 75, 121); /* Gradient start color */
-    --gradient-end: rgb(116, 105, 170); /* Gradient end color */
+    height: 100dvh;                                   /* Full viewport height using dynamic units */
+    --bg: rgb(33, 34, 44);                          /* Base background color */
+    --text: rgb(248, 248, 242);                     /* Default text color */
+    --ghost-contrast: rgb(77, 77, 102);             /* Used for subtle contrast elements */
+    --faint-contrast: rgb(15, 17, 19);              /* Border and shadow base */
+    --faint-contrast-trans: rgba(15, 17, 19, 0.50); /* Transparent variant for overlays */
+    --mild-contrast: rgb(77, 77, 102);              /* Mid-level contrast */
+    --good-contrast: rgb(230, 230, 230);            /* High contrast for text or highlights */
+    --button-bg: rgb(121, 112, 169);                /* Default button background */
+    --button-bg-hover: rgb(255, 85, 85);            /* Button hover background */
+    --button-text: rgb(248, 248, 242);              /* Button text color */
+    --focus-color: rgb(80, 250, 123);               /* Focus ring or highlight color */
+    --gradient-start: rgb(81, 75, 121);             /* Header gradient start */
+    --gradient-end: rgb(116, 105, 170);             /* Header gradient end */
 }
 
-/* Dark theme variables */
+/* Overrides for dark theme variant */
 :root .theme-dark {
     color-scheme: dark;
-    --bg: rgb(13, 13, 17); /* Dark background color */
-    --text: rgb(200, 200, 200); /* Dark text color */
-    --good-contrast: rgba(230, 230, 230, 0.98); /* Good contrast color with transparency */
-    --button-bg: rgb(79, 81, 103); /* Dark button background color */
-    --button-bg-hover: rgb(164, 54, 54); /* Dark button background color on hover */
-    --button-text: rgb(230, 230, 230); /* Dark button text color */
-    --focus-color: rgb(55, 173, 85); /* Dark focus color */
-    --gradient-start: rgb(30, 28, 45); /* Dark gradient start color */
-    --gradient-end: rgb(56, 51, 84); /* Dark gradient end color */
+    --bg: rgb(13, 13, 17);
+    --text: rgb(200, 200, 200);
+    --good-contrast: rgba(230, 230, 230, 0.98);
+    --button-bg: rgb(79, 81, 103);
+    --button-bg-hover: rgb(164, 54, 54);
+    --button-text: rgb(230, 230, 230);
+    --focus-color: rgb(55, 173, 85);
+    --gradient-start: rgb(30, 28, 45);
+    --gradient-end: rgb(56, 51, 84);
 }
 
-/* Styling for header section */
+/* Link color override for dark theme */
+:root .theme-dark a {
+    color: var(--button-text);
+}
+
+/* Sticky header with gradient background and shadow */
 header {
     background-image: linear-gradient(to bottom, var(--gradient-start) 30%, var(--gradient-end) 100%);
     background-repeat: no-repeat;
@@ -44,12 +49,12 @@ header {
     text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
 }
 
-/* Styling for body section */
+/* Body background scaling */
 body {
     background-size: contain;
 }
 
-/* Styling for root container */
+/* Root container layout */
 #root {
     margin: auto;
     max-width: 100%;
@@ -58,12 +63,12 @@ body {
     flex-direction: column;
 }
 
-/* Styling for child div of root */
-#root>div {
+/* Ensure child divs inside root don’t overflow */
+#root > div {
     max-width: 100%;
 }
 
-/* Styling for breadcrumb navigation */
+/* Breadcrumb styling for navigation elements */
 .breadcrumb {
     padding: .1em .6em .2em;
     line-height: 1.8em;
@@ -79,18 +84,18 @@ body {
     transition: all 0.25s ease;
 }
 
-/* Hover effect for breadcrumb */
+/* Breadcrumb hover effect */
 .breadcrumb:hover {
     background-color: var(--button-bg-hover);
     text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
 }
 
-/* Styling for list wrapper */
+/* Wrapper for directory listing */
 .list-wrapper {
     max-width: 100%;
 }
 
-/* Styling for directory list */
+/* Directory list container */
 ul.dir {
     flex: 1;
     padding: 15px;
@@ -100,7 +105,7 @@ ul.dir {
     text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
 }
 
-/* Styling for list items in directory */
+/* Individual directory items */
 ul.dir li {
     display: block;
     min-height: 2em;
@@ -111,7 +116,7 @@ ul.dir li {
     border-radius: 8px;
 }
 
-/* Styling for buttons */
+/* Button styling */
 button {
     background-color: var(--button-bg);
     color: var(--button-text);
@@ -127,14 +132,14 @@ button {
     transition: all 0.25s ease;
 }
 
-/* Hover effect for buttons */
+/* Button hover effect */
 button:hover {
     background-color: var(--button-text);
     color: var(--button-bg-hover);
     text-shadow: 1px 1px 4px rgba(255, 255, 255, 70%);
 }
 
-/* Styling for anchor tags */
+/* Link styling */
 a {
     text-decoration: none;
     color: var(--button-text);
@@ -142,7 +147,7 @@ a {
     vertical-align: middle;
 }
 
-/* Styling for player title */
+/* Player title styling */
 #player-title {
     color: var(--button-text);
     padding: .5em 1em;
@@ -154,7 +159,7 @@ a {
     font-weight: bold;
 }
 
-/* Media query for player section */
+/* Responsive player layout for large screens */
 @media (min-width: 1200px) {
     #player {
         position: fixed;
@@ -170,3 +175,4 @@ a {
         z-index: 1;
     }
 }
+
