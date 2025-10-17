@@ -1,33 +1,33 @@
 /* Root-level variables for theme colors and layout */
 :root {
     height: 100dvh;                                   /* Full viewport height using dynamic units */
-    --bg: rgb(33, 34, 44);                          /* Base background color */
+    --bg: rgb(40, 42, 54);                          /* Base background color */
     --text: rgb(248, 248, 242);                     /* Default text color */
-    --ghost-contrast: rgb(77, 77, 102);             /* Used for subtle contrast elements */
-    --faint-contrast: rgb(15, 17, 19);              /* Border and shadow base */
-    --faint-contrast-trans: rgba(15, 17, 19, 0.50); /* Transparent variant for overlays */
-    --mild-contrast: rgb(77, 77, 102);              /* Mid-level contrast */
+    --ghost-contrast: rgb(68, 71, 90);              /* Used for subtle contrast elements */
+    --faint-contrast: rgb(25, 26, 33);              /* Border and shadow base */
+    --faint-contrast-trans: rgba(25, 26, 33, 0.50); /* Transparent variant for overlays */
+    --mild-contrast: rgb(68, 71, 90);               /* Mid-level contrast */
     --good-contrast: rgb(230, 230, 230);            /* High contrast for text or highlights */
-    --button-bg: rgb(121, 112, 169);                /* Default button background */
+    --button-bg: rgb(98, 114, 164);                 /* Default button background */
     --button-bg-hover: rgb(255, 85, 85);            /* Button hover background */
     --button-text: rgb(248, 248, 242);              /* Button text color */
     --focus-color: rgb(80, 250, 123);               /* Focus ring or highlight color */
-    --gradient-start: rgb(81, 75, 121);             /* Header gradient start */
-    --gradient-end: rgb(116, 105, 170);             /* Header gradient end */
+    --gradient-start: rgb(68, 71, 90);              /* Header gradient start */
+    --gradient-end: rgb(98, 114, 164);              /* Header gradient end */
 }
 
 /* Overrides for dark theme variant */
 :root .theme-dark {
     color-scheme: dark;
-    --bg: rgb(13, 13, 17);
-    --text: rgb(200, 200, 200);
-    --good-contrast: rgba(230, 230, 230, 0.98);
-    --button-bg: rgb(79, 81, 103);
-    --button-bg-hover: rgb(164, 54, 54);
-    --button-text: rgb(230, 230, 230);
-    --focus-color: rgb(55, 173, 85);
-    --gradient-start: rgb(30, 28, 45);
-    --gradient-end: rgb(56, 51, 84);
+    --bg: rgb(25, 26, 33);
+    --text: rgb(248, 248, 242);
+    --good-contrast: rgba(248, 248, 242, 0.98);
+    --button-bg: rgb(68, 71, 90);
+    --button-bg-hover: rgb(255, 85, 85);
+    --button-text: rgb(248, 248, 242);
+    --focus-color: rgb(80, 250, 123);
+    --gradient-start: rgb(40, 42, 54);
+    --gradient-end: rgb(68, 71, 90);
 }
 
 /* Link color override for dark theme */
@@ -63,7 +63,7 @@ body {
     flex-direction: column;
 }
 
-/* Ensure child divs inside root don’t overflow */
+/* Ensure child divs inside root don't overflow */
 #root > div {
     max-width: 100%;
 }
@@ -169,7 +169,7 @@ a {
         padding: .5%;
         min-width: calc((100vw - 800px) / 1.2);
         box-sizing: border-box;
-        background: rgba(15, 17, 17, 0.50);
+        background: rgba(25, 26, 33, 0.50);
         border-radius: 8px;
         border: 1px solid var(--faint-contrast);
         z-index: 1;

@@ -1,9 +1,9 @@
-exports.version = 3.1
-exports.description = "Dracula theme by 8gudbits"
-exports.isTheme = "dark"
-exports.preview = "https://github.com/8gudbits/hfs-dracula-theme/raw/main/preview.png"
-exports.apiRequired = 1
 exports.repo = "8gudbits/hfs-dracula-theme"
+exports.version = 3.2
+exports.description = "Dracula theme by 8gudbits"
+exports.preview = "https://github.com/8gudbits/hfs-dracula-theme/raw/main/preview.png"
+exports.isTheme = "dark"
+exports.apiRequired = 1
 exports.frontend_css = "style.css"
 exports.frontend_js = "main.js"
 exports.config = {
