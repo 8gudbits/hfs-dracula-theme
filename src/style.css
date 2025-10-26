@@ -1,178 +1,36 @@
-/* Root-level variables for theme colors and layout */
-:root {
-    height: 100dvh;                                   /* Full viewport height using dynamic units */
-    --bg: rgb(40, 42, 54);                          /* Base background color */
-    --text: rgb(248, 248, 242);                     /* Default text color */
-    --ghost-contrast: rgb(68, 71, 90);              /* Used for subtle contrast elements */
-    --faint-contrast: rgb(25, 26, 33);              /* Border and shadow base */
-    --faint-contrast-trans: rgba(25, 26, 33, 0.50); /* Transparent variant for overlays */
-    --mild-contrast: rgb(68, 71, 90);               /* Mid-level contrast */
-    --good-contrast: rgb(230, 230, 230);            /* High contrast for text or highlights */
-    --button-bg: rgb(98, 114, 164);                 /* Default button background */
-    --button-bg-hover: rgb(255, 85, 85);            /* Button hover background */
-    --button-text: rgb(248, 248, 242);              /* Button text color */
-    --focus-color: rgb(80, 250, 123);               /* Focus ring or highlight color */
-    --gradient-start: rgb(68, 71, 90);              /* Header gradient start */
-    --gradient-end: rgb(98, 114, 164);              /* Header gradient end */
-}
-
-/* Overrides for dark theme variant */
 :root .theme-dark {
-    color-scheme: dark;
-    --bg: rgb(25, 26, 33);
-    --text: rgb(248, 248, 242);
-    --good-contrast: rgba(248, 248, 242, 0.98);
-    --button-bg: rgb(68, 71, 90);
-    --button-bg-hover: rgb(255, 85, 85);
-    --button-text: rgb(248, 248, 242);
-    --focus-color: rgb(80, 250, 123);
-    --gradient-start: rgb(40, 42, 54);
-    --gradient-end: rgb(68, 71, 90);
-}
+    /* ====== Core colors ====== */
+    --bg: rgb(14, 13, 17);
+    --bg2: rgb(14, 13, 17);
+    --fg: rgb(226, 225, 232);
+    --text: rgb(226, 225, 232);
+    --text-high-contrast: rgb(248, 248, 242);
 
-/* Link color override for dark theme */
-:root .theme-dark a {
-    color: var(--button-text);
-}
+    /* ====== Contrast levels ====== */
+    --faint-contrast: rgb(40, 42, 54);
+    --ghost-contrast: rgb(28, 27, 34);
+    --ghost-contrast-alt: rgb(28, 27, 34);
+    --mild-contrast: rgb(68, 71, 90);
+    --good-contrast: rgb(226, 225, 232);
 
-/* Sticky header with gradient background and shadow */
-header {
-    background-image: linear-gradient(to bottom, var(--gradient-start) 30%, var(--gradient-end) 100%);
-    background-repeat: no-repeat;
-    filter: none;
-    position: sticky;
-    padding: .7em;
-    top: 0;
-    z-index: 1;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-}
+    /* ====== Status colors ====== */
+    --success: rgb(74, 129, 69);
+    --warning: rgb(249, 195, 118);
+    --error: rgb(255, 85, 85);
+    --focus-color: rgb(140, 118, 249);
+    --link: rgb(249, 195, 118);
 
-/* Body background scaling */
-body {
-    background-size: contain;
-}
+    /* ====== UI elements ====== */
+    --button-bg: rgb(52, 52, 56);
+    --button-text: rgb(249, 195, 118);
+    --button-hover-bg: rgb(68, 71, 90);
+    --button-bg-rgb: 52, 52, 56;
 
-/* Root container layout */
-#root {
-    margin: auto;
-    max-width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+    /* ====== Borders and separators ====== */
+    --border: rgb(68, 71, 90);
+    --separator: rgb(68, 71, 90);
 
-/* Ensure child divs inside root don't overflow */
-#root > div {
-    max-width: 100%;
-}
-
-/* Breadcrumb styling for navigation elements */
-.breadcrumb {
-    padding: .1em .6em .2em;
-    line-height: 1.8em;
-    border-radius: .7em;
-    background-color: var(--button-bg);
-    border: 1px solid var(--faint-contrast);
-    margin: 2px 4px auto;
-    display: inline-block;
-    min-width: 60px;
-    text-align: center;
-    text-shadow: 0px 0px 4px rgb(0 0 0 / 40%);
-    word-break: break-word;
-    transition: all 0.25s ease;
-}
-
-/* Breadcrumb hover effect */
-.breadcrumb:hover {
-    background-color: var(--button-bg-hover);
-    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
-}
-
-/* Wrapper for directory listing */
-.list-wrapper {
-    max-width: 100%;
-}
-
-/* Directory list container */
-ul.dir {
-    flex: 1;
-    padding: 15px;
-    margin: auto;
-    min-width: 95%;
-    max-width: 95%;
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-}
-
-/* Individual directory items */
-ul.dir li {
-    display: block;
-    min-height: 2em;
-    list-style-type: none;
-    margin: 1px auto;
-    padding: .3em .3em .4em;
-    border: 1px solid var(--faint-contrast);
-    border-radius: 8px;
-}
-
-/* Button styling */
-button {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    padding: .5em 1em;
-    text-decoration: none;
-    border-radius: .3em;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid var(--faint-contrast);
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-    font-size: 20px;
-    font-weight: bold;
-    transition: all 0.25s ease;
-}
-
-/* Button hover effect */
-button:hover {
-    background-color: var(--button-text);
-    color: var(--button-bg-hover);
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 70%);
-}
-
-/* Link styling */
-a {
-    text-decoration: none;
-    color: var(--button-text);
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-/* Player title styling */
-#player-title {
-    color: var(--button-text);
-    padding: .5em 1em;
-    text-decoration: none;
-    border-radius: .3em;
-    vertical-align: middle;
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Responsive player layout for large screens */
-@media (min-width: 1200px) {
-    #player {
-        position: fixed;
-        top: auto;
-        bottom: 2px;
-        left: 2px;
-        padding: .5%;
-        min-width: calc((100vw - 800px) / 1.2);
-        box-sizing: border-box;
-        background: rgba(25, 26, 33, 0.50);
-        border-radius: 8px;
-        border: 1px solid var(--faint-contrast);
-        z-index: 1;
-    }
+    /* ====== Primary color ====== */
+    --color: rgb(98, 114, 164);
 }
 
