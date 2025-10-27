@@ -1,160 +1,24 @@
-:root {
-    height: 100dvh;
-    --bg: rgb(40, 42, 54);
-    --text: rgb(248, 248, 242);
-    --ghost-contrast: rgb(68, 71, 90);
-    --faint-contrast: rgb(25, 26, 33);
-    --faint-contrast-trans: rgba(25, 26, 33, 0.50);
-    --mild-contrast: rgb(68, 71, 90);
-    --good-contrast: rgb(230, 230, 230);
-    --button-bg: rgb(98, 114, 164);
-    --button-bg-hover: rgb(255, 85, 85);
-    --button-text: rgb(248, 248, 242);
-    --focus-color: rgb(80, 250, 123);
-    --gradient-start: rgb(68, 71, 90);
-    --gradient-end: rgb(98, 114, 164);
-}
-
 :root .theme-dark {
-    color-scheme: dark;
-    --bg: rgb(25, 26, 33);
-    --text: rgb(248, 248, 242);
-    --good-contrast: rgba(248, 248, 242, 0.98);
-    --button-bg: rgb(68, 71, 90);
-    --button-bg-hover: rgb(255, 85, 85);
-    --button-text: rgb(248, 248, 242);
-    --focus-color: rgb(80, 250, 123);
-    --gradient-start: rgb(40, 42, 54);
-    --gradient-end: rgb(68, 71, 90);
-}
-
-:root .theme-dark a {
-    color: var(--button-text);
-}
-
-header {
-    background-image: linear-gradient(to bottom, var(--gradient-start) 30%, var(--gradient-end) 100%);
-    background-repeat: no-repeat;
-    filter: none;
-    position: sticky;
-    padding: .7em;
-    top: 0;
-    z-index: 1;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-}
-
-body {
-    background-size: contain;
-}
-
-#root {
-    margin: auto;
-    max-width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#root>div {
-    max-width: 100%;
-}
-
-.breadcrumb {
-    padding: .1em .6em .2em;
-    line-height: 1.8em;
-    border-radius: .7em;
-    background-color: var(--button-bg);
-    border: 1px solid var(--faint-contrast);
-    margin: 2px 4px auto;
-    display: inline-block;
-    min-width: 60px;
-    text-align: center;
-    text-shadow: 0px 0px 4px rgb(0 0 0 / 40%);
-    word-break: break-word;
-    transition: all 0.25s ease;
-}
-
-.breadcrumb:hover {
-    background-color: var(--button-bg-hover);
-    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.4);
-}
-
-.list-wrapper {
-    max-width: 100%;
-}
-
-ul.dir {
-    flex: 1;
-    padding: 15px;
-    margin: auto;
-    min-width: 95%;
-    max-width: 95%;
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-}
-
-ul.dir li {
-    display: block;
-    min-height: 2em;
-    list-style-type: none;
-    margin: 1px auto;
-    padding: .3em .3em .4em;
-    border: 1px solid var(--faint-contrast);
-    border-radius: 8px;
-}
-
-button {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    padding: .5em 1em;
-    text-decoration: none;
-    border-radius: .3em;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid var(--faint-contrast);
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-    font-size: 20px;
-    font-weight: bold;
-    transition: all 0.25s ease;
-}
-
-button:hover {
-    background-color: var(--button-text);
-    color: var(--button-bg-hover);
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 70%);
-}
-
-a {
-    text-decoration: none;
-    color: var(--button-text);
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-#player-title {
-    color: var(--button-text);
-    padding: .5em 1em;
-    text-decoration: none;
-    border-radius: .3em;
-    vertical-align: middle;
-    text-shadow: 1px 1px 4px rgb(0 0 0 / 70%);
-    font-size: 18px;
-    font-weight: bold;
-}
-
-@media (min-width: 1200px) {
-    #player {
-        position: fixed;
-        top: auto;
-        bottom: 2px;
-        left: 2px;
-        padding: .5%;
-        min-width: calc((100vw - 800px) / 1.2);
-        box-sizing: border-box;
-        background: rgba(25, 26, 33, 0.50);
-        border-radius: 8px;
-        border: 1px solid var(--faint-contrast);
-        z-index: 1;
-    }
+    --bg: rgba(26, 23, 38, 0.6);
+    --bg2: rgba(14, 13, 17, 0.6);
+    --fg: rgb(226, 225, 232);
+    --text: rgb(226, 225, 232);
+    --text-high-contrast: rgb(248, 248, 242);
+    --faint-contrast: rgba(40, 42, 54, 0.6);
+    --ghost-contrast: rgba(28, 27, 34, 0.6);
+    --ghost-contrast-alt: rgba(28, 27, 34, 0.6);
+    --mild-contrast: rgb(68, 71, 90);
+    --good-contrast: rgb(226, 225, 232);
+    --success: rgb(74, 129, 69);
+    --warning: rgb(249, 195, 118);
+    --error: rgb(255, 85, 85);
+    --focus-color: rgb(140, 118, 249);
+    --link: rgb(249, 195, 118);
+    --button-bg: rgb(14, 13, 17);
+    --button-text: rgb(249, 195, 118);
+    --button-hover-bg: rgb(28, 27, 34);
+    --button-bg-rgb: 52, 52, 56;
+    --border: rgb(28, 27, 34);
+    --separator: rgb(28, 27, 34);
+    --color: rgb(98, 114, 164);
 }
