@@ -1,6 +1,6 @@
 exports.repo = "8gudbits/hfs-dracula-theme"
-exports.version = 3.2
-exports.description = "Dracula theme by 8gudbits"
+exports.version = 4.0
+exports.description = "Dracula theme by 8gudbits for HFS"
 exports.preview = "https://github.com/8gudbits/hfs-dracula-theme/raw/main/preview.png"
 exports.isTheme = "dark"
 exports.apiRequired = 1
@@ -29,3 +29,4 @@ exports.config = {
     placeholder: "default: 2",
   },
 }
+
