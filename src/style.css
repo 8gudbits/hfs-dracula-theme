@@ -1,15 +1,15 @@
 :root .theme-dark {
     /* ====== Core colors ====== */
-    --bg: rgb(14, 13, 17);
-    --bg2: rgb(14, 13, 17);
+    --bg: rgba(26, 23, 38, 0.6);
+    --bg2: rgba(14, 13, 17, 0.6);
     --fg: rgb(226, 225, 232);
     --text: rgb(226, 225, 232);
     --text-high-contrast: rgb(248, 248, 242);
 
     /* ====== Contrast levels ====== */
-    --faint-contrast: rgb(40, 42, 54);
-    --ghost-contrast: rgb(28, 27, 34);
-    --ghost-contrast-alt: rgb(28, 27, 34);
+    --faint-contrast: rgba(40, 42, 54, 0.6);
+    --ghost-contrast: rgba(28, 27, 34, 0.6);
+    --ghost-contrast-alt: rgba(28, 27, 34, 0.6);
     --mild-contrast: rgb(68, 71, 90);
     --good-contrast: rgb(226, 225, 232);
 
@@ -21,14 +21,14 @@
     --link: rgb(249, 195, 118);
 
     /* ====== UI elements ====== */
-    --button-bg: rgb(52, 52, 56);
+    --button-bg: rgb(14, 13, 17);
     --button-text: rgb(249, 195, 118);
-    --button-hover-bg: rgb(68, 71, 90);
+    --button-hover-bg: rgb(28, 27, 34);
     --button-bg-rgb: 52, 52, 56;
 
     /* ====== Borders and separators ====== */
-    --border: rgb(68, 71, 90);
-    --separator: rgb(68, 71, 90);
+    --border: rgb(28, 27, 34);
+    --separator: rgb(28, 27, 34);
 
     /* ====== Primary color ====== */
     --color: rgb(98, 114, 164);
